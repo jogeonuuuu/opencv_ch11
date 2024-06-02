@@ -5,7 +5,7 @@
 
 <실행결과>
 ![image](https://github.com/jogeonuuuu/opencv_ch11/assets/169337989/2f08abda-8bf4-4425-b506-47bd97b83431)
-
+ 
 
 
 ### 실습과제 2번
