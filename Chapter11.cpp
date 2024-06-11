@@ -1,5 +1,6 @@
-//11-1-1
-/*#include <opencv2/opencv.hpp>
+### 11-1
+#### //11-1-1
+#include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace cv;
 using namespace std;
@@ -47,9 +48,11 @@ Mat getGrayHistImage(const Mat& hist) {
 //	Mat img = *(Mat*)userdata;
 //	if (event == EVENT_LBUTTONDOWN)
 //		cout << x << endl;
-//}*/
-//11-1-2
-/*#include <opencv2/opencv.hpp>
+//}
+
+
+#### //11-1-2
+#include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace cv;
 using namespace std;
@@ -92,8 +95,11 @@ Mat getGrayHistImage(const Mat& hist) {
 	}
 	return imgHist;
 }*/
-//11-1-3
-/*#include <opencv2/opencv.hpp>
+
+
+
+#### //11-1-3
+#include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace cv;
 using namespace std;
@@ -127,9 +133,12 @@ void C_onChange(int pos, void* userdata) {
 	if (bsize < 3) bsize = 3;
 	adaptiveThreshold(src, dst, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, bsize, pos);
 	imshow("dst", dst);
-}*/
-//11-1-4
-/*#include <opencv2/opencv.hpp>
+}
+
+
+
+#### //11-1-4
+#include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace cv;
 using namespace std;
@@ -182,13 +191,13 @@ Mat getGrayHistImage(const Mat& hist) {
 		line(imgHist, Point(i, 100), Point(i, 100 - cvRound(hist.at<float>(i, 0) * 100 / histMax)), Scalar(0));
 	}
 	return imgHist;
-}*/
+}
 
 
 
-
-//11-2-1
-/*#include <iostream>
+### 11-2
+#### //11-2-1
+#include <iostream>
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
@@ -201,9 +210,12 @@ int main(void) {
 	cout << "MORPH_CROSS:" << endl << m2 << endl;
 	cout << "MORPH_ELLIPSE:" << endl << m3 << endl;
 	return 0;
-}*/
-//11-2-2
-/*#include <iostream>
+}
+
+
+
+#### //11-2-2
+#include <iostream>
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
@@ -218,9 +230,12 @@ int main(void) {
 	imshow("erode", dst);
 	waitKey();
 	return 0;
-}*/
-//11-2-3
-/*#include <iostream>
+}
+
+
+
+#### //11-2-3
+#include <iostream>
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
@@ -229,15 +244,18 @@ int main(void) {
 	Mat bin;
 	threshold(src, bin, 200, 255, THRESH_BINARY);
 	Mat edge;
-	morphologyEx(bin, edge, MORPH_GRADIENT, Mat()); //ÆØÃ¢-Ä§½Ä
+	morphologyEx(bin, edge, MORPH_GRADIENT, Mat()); //íŒ½ì°½-ì¹¨ì‹
 	imshow("src", src);
 	imshow("bin", bin);
 	imshow("edge", edge);
 	waitKey();
 	return 0;
-}*/
-//11-2-4
-/*#include <iostream>
+}
+
+
+
+#### //11-2-4
+#include <iostream>
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
@@ -256,9 +274,9 @@ int main(void) {
 	morphologyEx(binary, final, MORPH_ERODE, Mat());
 	morphologyEx(final, final, MORPH_CLOSE, kernel);
 	imshow("image", src);
-	imshow("xÃà ¹æÇâ ¼Òº§", dx);
-	imshow("ÀÌÁøÈ­ ¿µ»ó", binary);
-	imshow("´İÈû ¿µ»ó", final);
+	imshow("xì¶• ë°©í–¥ ì†Œë²¨", dx);
+	imshow("ì´ì§„í™” ì˜ìƒ", binary);
+	imshow("ë‹«í˜ ì˜ìƒ", final);
 	waitKey();
 	return 0;
-}*/
+}
